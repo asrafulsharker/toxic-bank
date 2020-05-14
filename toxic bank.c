@@ -50,13 +50,13 @@ int ATM_Transaction()
     if(amountToWidthdraw <= balance)
     {
      printf("Pls collect your cash\n");
-     balance=balance-amountToWidthdraw;//
+     balance=balance-amountToWidthdraw;
      printf("Your available balance is %lf\n",balance);
      printf("\n\nDo you want to perform another transaction?\n Press 1 to proceed and 2 to exit\n\n");
      scanf("%d", &anotherTransaction);
        if(anotherTransaction == 1)
         {
-             ATM_Transaction();  // call our ATM_Transaction method here
+             ATM_Transaction(); 
         }
     }
      else
@@ -71,7 +71,7 @@ int ATM_Transaction()
     }
     break;
 
-    case 3:// DEPOSIT
+    case 3:
     printf("Please enter amount to deposit: ");
     scanf("%d", &amountToDeposit);
     balance = amountToDeposit + balance;
